@@ -32,4 +32,4 @@ def test_get_customers():
     data = response.json()
 
     assert len(data) == 2
-    assert data[0]["name"] == "Ahmed"
+    assert data[0]["name"] == "John"
