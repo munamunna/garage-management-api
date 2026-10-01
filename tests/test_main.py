@@ -22,3 +22,14 @@ def test_health():
     assert response.json() == {
         "status": "healthy"
     }
+
+
+def test_get_customers():
+    response = client.get("/customers")
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert len(data) == 2
+    assert data[0]["name"] == "Ahmed"
